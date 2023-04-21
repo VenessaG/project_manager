@@ -1,0 +1,63 @@
+import java.util.Date;
+
+public class Project {
+
+//    Create variables
+
+    private final int projectNumber;
+    private final String projectName;
+    private final String buildingType;
+    private final String address;
+    private final int erfNumber;
+    private final double totalFee;
+    private double totalPaid;
+    private String deadline;
+    private String newDateDue;
+
+
+//    Constructor
+
+    public Project(int projectNumber, String projectName, String buildingType, String address, int erfNumber, double totalFee,
+                   double totalPaid, String deadline, String newDateDue) {
+        this.projectNumber = projectNumber;
+        this.projectName = projectName;
+        this.buildingType = buildingType;
+        this.address = address;
+        this.erfNumber = erfNumber;
+        this.totalFee = totalFee;
+        this.totalPaid = totalPaid;
+        this.deadline = deadline;
+        this.newDateDue = newDateDue;
+
+
+    }
+
+    //    Methods
+    public void setDeadline(String newDeadLine) {
+        this.deadline = newDeadLine;
+    }
+
+    public void setNewDateDue(String newDateDue) {
+        this.newDateDue = newDateDue;
+    }
+
+    public void setPaidToDate(double newPaidToDate) {
+        this.totalPaid = 0;
+    }
+
+// Display all variables in a readable manner
+
+    public String toString() {
+        String output = "Project Number: " + projectNumber;
+        output += "\nProject Name: " + projectName;
+        output += "\nBuilding Type: " + buildingType;
+        output += "\nAddress: " + address;
+        output += "\nERF Number: " + erfNumber;
+        output += "\nTotal Fee: " + "R " + totalFee;
+        output += "\nPaid To Date: " + "R " + totalPaid;
+        output += "\nDeadline: " + deadline;
+        output += "\nNew Date Due: " + newDateDue;
+
+        return output;
+    }
+}
